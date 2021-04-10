@@ -1,0 +1,5 @@
+author: Inácio Ferrarini
+module: BooksOnTheTable
+output: docs
+theme: fullwidth
+xcodebuild_arguments: [-project, 'BooksOnTheTable.xcodeproj', -scheme, 'BooksOnTheTable']

@@ -1,0 +1,19 @@
+{
+  "commitish" : "v1.0.5",
+  "iOS" : [
+    {
+      "swiftToolchainVersion" : "5.3.1 (swiftlang-1200.0.41 clang-1200.0.32.8)",
+      "hash" : "76c5e6c1baf928cb9300ade3408d2bc7a15bb58d9ea0e5aababdb74b29946e80",
+      "name" : "Awe",
+      "container" : "Awe.xcframework",
+      "identifier" : "ios-arm64_i386_x86_64-simulator"
+    },
+    {
+      "swiftToolchainVersion" : "5.3.1 (swiftlang-1200.0.41 clang-1200.0.32.8)",
+      "hash" : "d35d5a02d6873764518a685afa5585800de6d74f526191897301849290975eb0",
+      "name" : "Awe",
+      "container" : "Awe.xcframework",
+      "identifier" : "ios-arm64_armv7"
+    }
+  ]
+}
