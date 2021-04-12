@@ -34,7 +34,7 @@ class ViewController: UIViewController {
 						email: "user@email.com",
 						password: "12345678"
 		)
-				
+		
 		DispatchQueue.global().async {
 			self.authenticate(with: user) { (result: Result<Token, Error>) in
 				switch result {

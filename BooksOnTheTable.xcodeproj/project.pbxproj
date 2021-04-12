@@ -14,7 +14,6 @@
 		BB34AE8F261FC04600025F13 /* NSManagedObject+Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34AE8E261FC04600025F13 /* NSManagedObject+Fetch.swift */; };
 		BB400A6C26151F7E0042634F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB57991B261507E100A18A6D /* Main.storyboard */; };
 		BB579916261507E100A18A6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB579915261507E100A18A6D /* AppDelegate.swift */; };
-		BB579918261507E100A18A6D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB579917261507E100A18A6D /* SceneDelegate.swift */; };
 		BB57991A261507E100A18A6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB579919261507E100A18A6D /* ViewController.swift */; };
 		BB57991F261507E200A18A6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB57991E261507E200A18A6D /* Assets.xcassets */; };
 		BB579922261507E200A18A6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB579920261507E200A18A6D /* LaunchScreen.storyboard */; };
@@ -31,6 +30,9 @@
 		BBB5E7F926223D74002C1149 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB5E7F826223D74002C1149 /* Token.swift */; };
 		BBB5E7FF26223E9E002C1149 /* BooksConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB5E7FE26223E9E002C1149 /* BooksConstants.swift */; };
 		BBB5E80A26223ED4002C1149 /* SecurityConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB5E80926223ED4002C1149 /* SecurityConstants.swift */; };
+		BBDC81C82625005B00B9C371 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDC81C72625005B00B9C371 /* MainCoordinator.swift */; };
+		BBDC81D72625095600B9C371 /* BooksCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDC81D62625095600B9C371 /* BooksCoordinator.swift */; };
+		BBDC81DC2625099800B9C371 /* SecurityCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDC81DB2625099800B9C371 /* SecurityCoordinator.swift */; };
 		BBEFAAA3261FB6D700B24252 /* EntityBook+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEFAAA1261FB6D700B24252 /* EntityBook+CoreDataClass.swift */; };
 		BBEFAAA4261FB6D700B24252 /* EntityBook+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEFAAA2261FB6D700B24252 /* EntityBook+CoreDataProperties.swift */; };
 		BBEFAAA9261FB8C700B24252 /* NSObject+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEFAAA8261FB8C700B24252 /* NSObject+Utils.swift */; };
@@ -98,6 +100,9 @@
 		BBB5E7F826223D74002C1149 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		BBB5E7FE26223E9E002C1149 /* BooksConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksConstants.swift; sourceTree = "<group>"; };
 		BBB5E80926223ED4002C1149 /* SecurityConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityConstants.swift; sourceTree = "<group>"; };
+		BBDC81C72625005B00B9C371 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		BBDC81D62625095600B9C371 /* BooksCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksCoordinator.swift; sourceTree = "<group>"; };
+		BBDC81DB2625099800B9C371 /* SecurityCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityCoordinator.swift; sourceTree = "<group>"; };
 		BBEFAAA1261FB6D700B24252 /* EntityBook+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EntityBook+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BBEFAAA2261FB6D700B24252 /* EntityBook+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EntityBook+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BBEFAAA8261FB8C700B24252 /* NSObject+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Utils.swift"; sourceTree = "<group>"; };
@@ -172,6 +177,7 @@
 		BB579914261507E100A18A6D /* BooksOnTheTable */ = {
 			isa = PBXGroup;
 			children = (
+				BBDC81C52625004100B9C371 /* Main */,
 				BBB5E7D5262237EA002C1149 /* Features */,
 				BB579915261507E100A18A6D /* AppDelegate.swift */,
 				BB579917261507E100A18A6D /* SceneDelegate.swift */,
@@ -229,6 +235,7 @@
 		BBB5E7D6262237F1002C1149 /* Security */ = {
 			isa = PBXGroup;
 			children = (
+				BBDC81DA2625098A00B9C371 /* Coordinator */,
 				BBB5E7DE262238EC002C1149 /* API */,
 				BBB5E81126223EF2002C1149 /* Constants */,
 				BBB5E7D7262237F8002C1149 /* Models */,
@@ -258,10 +265,13 @@
 		BBB5E7FC26223E3E002C1149 /* Books */ = {
 			isa = PBXGroup;
 			children = (
-				BBB5E839262242AE002C1149 /* CoreData */,
 				BB582DB9261BBE9900845D34 /* API */,
 				BBB5E80426223EA9002C1149 /* Constants */,
+				BBDC81722624F15D00B9C371 /* Controller */,
+				BBDC81D52625091800B9C371 /* Coordinator */,
+				BBB5E839262242AE002C1149 /* CoreData */,
 				BB582DAE261BBA4700845D34 /* Models */,
+				BBDC81712624F15500B9C371 /* Views */,
 			);
 			path = Books;
 			sourceTree = "<group>";
@@ -324,6 +334,52 @@
 				BBEFAA83261FB44500B24252 /* Entities */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		BBDC81712624F15500B9C371 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BBDC81722624F15D00B9C371 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BBDC81C52625004100B9C371 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BBDC81C62625004900B9C371 /* Coordinator */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		BBDC81C62625004900B9C371 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				BBDC81C72625005B00B9C371 /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		BBDC81D52625091800B9C371 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				BBDC81D62625095600B9C371 /* BooksCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		BBDC81DA2625098A00B9C371 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				BBDC81DB2625099800B9C371 /* SecurityCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		BBEFAA7F261FB34600B24252 /* CoreData */ = {
@@ -502,6 +558,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB34AE8F261FC04600025F13 /* NSManagedObject+Fetch.swift in Sources */,
+				BBDC81C82625005B00B9C371 /* MainCoordinator.swift in Sources */,
 				BBB5E7F926223D74002C1149 /* Token.swift in Sources */,
 				BBEFAAB1261FBA5200B24252 /* CoreDataStack.swift in Sources */,
 				BB582DB6261BBD3300845D34 /* BookList.swift in Sources */,
@@ -512,10 +569,11 @@
 				BB582DBB261BBEBE00845D34 /* BooksAPI.swift in Sources */,
 				BB57991A261507E100A18A6D /* ViewController.swift in Sources */,
 				BB2A8EA1262105BF00AEA85F /* LoginFieldsView.swift in Sources */,
+				BBDC81DC2625099800B9C371 /* SecurityCoordinator.swift in Sources */,
 				BBEFAAA3261FB6D700B24252 /* EntityBook+CoreDataClass.swift in Sources */,
 				BBB5E7D12622370F002C1149 /* UsersAPI.swift in Sources */,
 				BB579916261507E100A18A6D /* AppDelegate.swift in Sources */,
-				BB579918261507E100A18A6D /* SceneDelegate.swift in Sources */,
+				BBDC81D72625095600B9C371 /* BooksCoordinator.swift in Sources */,
 				BBEFAAA9261FB8C700B24252 /* NSObject+Utils.swift in Sources */,
 				BB2A8E992621057200AEA85F /* XibView.swift in Sources */,
 				BB582DB0261BBA8600845D34 /* Book.swift in Sources */,
