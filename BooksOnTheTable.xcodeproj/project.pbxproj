@@ -24,6 +24,14 @@
 		BB582DB0261BBA8600845D34 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB582DAF261BBA8600845D34 /* Book.swift */; };
 		BB582DB6261BBD3300845D34 /* BookList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB582DB5261BBD3300845D34 /* BookList.swift */; };
 		BB582DBB261BBEBE00845D34 /* BooksAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB582DBA261BBEBE00845D34 /* BooksAPI.swift */; };
+		BB8F9F8726264213002D54F2 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB8F9F7F26264213002D54F2 /* Login.storyboard */; };
+		BB8F9F8826264213002D54F2 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8F9F8026264213002D54F2 /* LoginPresenter.swift */; };
+		BB8F9F8926264213002D54F2 /* LoginWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8F9F8126264213002D54F2 /* LoginWorker.swift */; };
+		BB8F9F8A26264213002D54F2 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8F9F8226264213002D54F2 /* LoginRouter.swift */; };
+		BB8F9F8B26264213002D54F2 /* LoginModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8F9F8326264213002D54F2 /* LoginModels.swift */; };
+		BB8F9F8C26264213002D54F2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8F9F8426264213002D54F2 /* LoginViewController.swift */; };
+		BB8F9F8E26264213002D54F2 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8F9F8626264213002D54F2 /* LoginInteractor.swift */; };
+		BB8F9F97262658A9002D54F2 /* LoginSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8F9F96262658A9002D54F2 /* LoginSceneDelegate.swift */; };
 		BBB5E7D12622370F002C1149 /* UsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB5E7D02622370F002C1149 /* UsersAPI.swift */; };
 		BBB5E7D92622380C002C1149 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB5E7D82622380C002C1149 /* User.swift */; };
 		BBB5E7F326223B5B002C1149 /* TokenAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB5E7F226223B5B002C1149 /* TokenAPI.swift */; };
@@ -94,6 +102,14 @@
 		BB582DAF261BBA8600845D34 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		BB582DB5261BBD3300845D34 /* BookList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookList.swift; sourceTree = "<group>"; };
 		BB582DBA261BBEBE00845D34 /* BooksAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksAPI.swift; sourceTree = "<group>"; };
+		BB8F9F7F26264213002D54F2 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		BB8F9F8026264213002D54F2 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		BB8F9F8126264213002D54F2 /* LoginWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWorker.swift; sourceTree = "<group>"; };
+		BB8F9F8226264213002D54F2 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		BB8F9F8326264213002D54F2 /* LoginModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModels.swift; sourceTree = "<group>"; };
+		BB8F9F8426264213002D54F2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BB8F9F8626264213002D54F2 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		BB8F9F96262658A9002D54F2 /* LoginSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSceneDelegate.swift; sourceTree = "<group>"; };
 		BBB5E7D02622370F002C1149 /* UsersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersAPI.swift; sourceTree = "<group>"; };
 		BBB5E7D82622380C002C1149 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BBB5E7F226223B5B002C1149 /* TokenAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenAPI.swift; sourceTree = "<group>"; };
@@ -222,6 +238,37 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		BB8F9F64262640B7002D54F2 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				BB8F9F65262640F2002D54F2 /* Login */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		BB8F9F65262640F2002D54F2 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				BB8F9F9126264218002D54F2 /* Resources */,
+				BB8F9F8626264213002D54F2 /* LoginInteractor.swift */,
+				BB8F9F8326264213002D54F2 /* LoginModels.swift */,
+				BB8F9F8026264213002D54F2 /* LoginPresenter.swift */,
+				BB8F9F8226264213002D54F2 /* LoginRouter.swift */,
+				BB8F9F8426264213002D54F2 /* LoginViewController.swift */,
+				BB8F9F8126264213002D54F2 /* LoginWorker.swift */,
+				BB8F9F96262658A9002D54F2 /* LoginSceneDelegate.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		BB8F9F9126264218002D54F2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BB8F9F7F26264213002D54F2 /* Login.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		BBB5E7D5262237EA002C1149 /* Features */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +282,7 @@
 		BBB5E7D6262237F1002C1149 /* Security */ = {
 			isa = PBXGroup;
 			children = (
+				BB8F9F64262640B7002D54F2 /* Scenes */,
 				BBDC81DA2625098A00B9C371 /* Coordinator */,
 				BBB5E7DE262238EC002C1149 /* API */,
 				BBB5E81126223EF2002C1149 /* Constants */,
@@ -532,6 +580,7 @@
 				BB400A6C26151F7E0042634F /* Main.storyboard in Resources */,
 				BB2A8E9D262105AB00AEA85F /* LoginFieldsView.xib in Resources */,
 				BB579922261507E200A18A6D /* LaunchScreen.storyboard in Resources */,
+				BB8F9F8726264213002D54F2 /* Login.storyboard in Resources */,
 				BB57991F261507E200A18A6D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -557,8 +606,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB8F9F8C26264213002D54F2 /* LoginViewController.swift in Sources */,
 				BB34AE8F261FC04600025F13 /* NSManagedObject+Fetch.swift in Sources */,
 				BBDC81C82625005B00B9C371 /* MainCoordinator.swift in Sources */,
+				BB8F9F8E26264213002D54F2 /* LoginInteractor.swift in Sources */,
+				BB8F9F8826264213002D54F2 /* LoginPresenter.swift in Sources */,
+				BB8F9F97262658A9002D54F2 /* LoginSceneDelegate.swift in Sources */,
+				BB8F9F8A26264213002D54F2 /* LoginRouter.swift in Sources */,
 				BBB5E7F926223D74002C1149 /* Token.swift in Sources */,
 				BBEFAAB1261FBA5200B24252 /* CoreDataStack.swift in Sources */,
 				BB582DB6261BBD3300845D34 /* BookList.swift in Sources */,
@@ -578,7 +632,9 @@
 				BB2A8E992621057200AEA85F /* XibView.swift in Sources */,
 				BB582DB0261BBA8600845D34 /* Book.swift in Sources */,
 				BBB5E7D92622380C002C1149 /* User.swift in Sources */,
+				BB8F9F8B26264213002D54F2 /* LoginModels.swift in Sources */,
 				BBB5E80A26223ED4002C1149 /* SecurityConstants.swift in Sources */,
+				BB8F9F8926264213002D54F2 /* LoginWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -60,9 +60,23 @@ class LoginFieldsView: XibView {
 		}
 	}
 
+	// MARK: - Public Methods
+	
+	func requestFocus() {
+		loginTextField.becomeFirstResponder()
+	}
+	
+	func resetFields() {
+		loginTextField.text = ""
+		passwordTextField.text = ""
+	}
+	
 	// MARK: - Action
 	
 	@IBAction func handleLogin() {
+		loginTextField.resignFirstResponder()
+		passwordTextField.resignFirstResponder()
+		
 		let loginCredential = LoginCredential(login: loginTextField.text ?? "", password: passwordTextField.text ?? "")
 		delegate?.loginFieldsView(self, didProvided: loginCredential)
 	}

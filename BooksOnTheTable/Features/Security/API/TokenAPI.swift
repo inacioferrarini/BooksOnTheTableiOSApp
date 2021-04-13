@@ -9,7 +9,7 @@ import Foundation
 import Awe
 
 protocol TokenAPIProtocol {
-	
+	func login(user: User, completion: @escaping ((Result<Token, Error>) -> Void))
 }
 
 class TokenAPI: TokenAPIProtocol {
