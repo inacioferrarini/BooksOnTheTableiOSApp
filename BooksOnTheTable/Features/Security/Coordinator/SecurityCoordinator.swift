@@ -31,8 +31,8 @@ class SecurityCoordinator {
 	
 }
 
-extension SecurityCoordinator {
-	
+extension SecurityCoordinator: LoginSceneDelegate {
+
 	private func loginViewController() -> LoginViewController? {
 		let storyboard = UIStoryboard(
 			name: "Login",
@@ -46,10 +46,6 @@ extension SecurityCoordinator {
 		
 		return viewController
 	}
-	
-}
-
-extension SecurityCoordinator: LoginSceneDelegate {
 	
 	func loginScene(_ loginScene: LoginViewController, didAuthenticateWith token: Token) {
 		debugPrint("@ Received Token: \(token)")
