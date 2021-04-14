@@ -27,7 +27,7 @@ class MainCoordinator {
 
 	func start() {
 		let token = securityCoordinator.token
-		if let token = token {
+		if let token = token, token.isValid {
 			booksCoordinator.token = token
 			booksCoordinator.start()
 		} else {

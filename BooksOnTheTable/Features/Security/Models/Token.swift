@@ -11,6 +11,10 @@ struct Token: Codable {
 	let token: String
 	let creationDate: Date
 	let expirationDate: Date
+	
+	var isValid: Bool {
+		return expirationDate >= Date()
+	}
 }
 
 enum Errors: Error {
@@ -27,21 +31,35 @@ extension Token {
 	}
 
 	init(from decoder: Decoder) throws {
-		let dateFormat = DateFormatter()
-		dateFormat.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+		let dateFormatter = DateFormatter()
+		dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
 		
 		let values = try decoder.container(keyedBy: CodingKeys.self)
 		token = try values.decode(String.self, forKey: .token)
-		
+				
 		guard let creationDateString = try? values.decode(String.self, forKey: .creationDate),
-			  let parsedCreationDate = dateFormat.date(from: creationDateString)
+			  let parsedCreationDate = dateFormatter.date(from: creationDateString)
 		else { throw Errors.creationDateDecodingError }
 		creationDate = parsedCreationDate
-		
+
 		guard let expirationDateString = try? values.decode(String.self, forKey: .expirationDate),
-			  let parsedExpirationDate = dateFormat.date(from: expirationDateString)
+			  let parsedExpirationDate = dateFormatter.date(from: expirationDateString)
 		else { throw Errors.expirationDateDecodingError }
 		expirationDate = parsedExpirationDate
 	}
 
+	func encode(to encoder: Encoder) throws {
+		var container = encoder.container(keyedBy: CodingKeys.self)
+		try container.encode(token, forKey: .token)
+		
+		let dateFormatter = DateFormatter()
+		dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+
+		let creationDateString = dateFormatter.string(from: creationDate)
+		try container.encode(creationDateString, forKey: .creationDate)
+		
+		let expirationDateString = dateFormatter.string(from: expirationDate)
+		try container.encode(expirationDateString, forKey: .expirationDate)
+	}
+	
 }

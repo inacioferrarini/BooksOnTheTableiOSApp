@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB1EF802262799F600BFC207 /* KeychainSwiftDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1EF801262799F600BFC207 /* KeychainSwiftDistrib.swift */; };
 		BB2A8E992621057200AEA85F /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2A8E982621057200AEA85F /* XibView.swift */; };
 		BB2A8E9D262105AB00AEA85F /* LoginFieldsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB2A8E9C262105AB00AEA85F /* LoginFieldsView.xib */; };
 		BB2A8EA1262105BF00AEA85F /* LoginFieldsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2A8EA0262105BF00AEA85F /* LoginFieldsView.swift */; };
@@ -79,6 +80,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BB1EF801262799F600BFC207 /* KeychainSwiftDistrib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainSwiftDistrib.swift; sourceTree = "<group>"; };
 		BB291314261B240F00F45C6E /* Awe.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Awe.xcframework; path = Carthage/Build/Awe.xcframework; sourceTree = "<group>"; };
 		BB2A8E982621057200AEA85F /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
 		BB2A8E9C262105AB00AEA85F /* LoginFieldsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginFieldsView.xib; sourceTree = "<group>"; };
@@ -151,6 +153,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB1EF8002627994D00BFC207 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				BB1EF801262799F600BFC207 /* KeychainSwiftDistrib.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
 		BB291313261B240F00F45C6E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,11 +292,12 @@
 		BBB5E7D6262237F1002C1149 /* Security */ = {
 			isa = PBXGroup;
 			children = (
-				BB8F9F64262640B7002D54F2 /* Scenes */,
-				BBDC81DA2625098A00B9C371 /* Coordinator */,
 				BBB5E7DE262238EC002C1149 /* API */,
+				BBDC81DA2625098A00B9C371 /* Coordinator */,
 				BBB5E81126223EF2002C1149 /* Constants */,
+				BB1EF8002627994D00BFC207 /* Keychain */,
 				BBB5E7D7262237F8002C1149 /* Models */,
+				BB8F9F64262640B7002D54F2 /* Scenes */,
 				BBB5E8372622427F002C1149 /* View */,
 			);
 			path = Security;
@@ -611,6 +622,7 @@
 				BBDC81C82625005B00B9C371 /* MainCoordinator.swift in Sources */,
 				BB8F9F8E26264213002D54F2 /* LoginInteractor.swift in Sources */,
 				BB8F9F8826264213002D54F2 /* LoginPresenter.swift in Sources */,
+				BB1EF802262799F600BFC207 /* KeychainSwiftDistrib.swift in Sources */,
 				BB8F9F97262658A9002D54F2 /* LoginSceneDelegate.swift in Sources */,
 				BB8F9F8A26264213002D54F2 /* LoginRouter.swift in Sources */,
 				BBB5E7F926223D74002C1149 /* Token.swift in Sources */,

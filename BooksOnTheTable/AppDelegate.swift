@@ -21,6 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 				
 		coordinator = MainCoordinator(navigationController: navigationController)
 		
+		UINavigationBar.appearance().barTintColor = .blue
+		UINavigationBar.appearance().tintColor = .white
+		UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
+
 		coordinator?.start()
 		
 		window = UIWindow(frame: UIScreen.main.bounds)
