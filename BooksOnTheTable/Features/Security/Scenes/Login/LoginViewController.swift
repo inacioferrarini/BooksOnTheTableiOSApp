@@ -20,7 +20,6 @@ class LoginViewController: UIViewController {
 	// MARK: - Properties
 
 	var interactor: LoginBusinessLogic?
-	var router: (LoginRoutingLogic & LoginDataPassing)?
 
 	// MARK: - Outlets
 
@@ -65,12 +64,9 @@ class LoginViewController: UIViewController {
 
 	private func setup() {
 		let viewController = self
-		let sceneNavigator = viewController.navigationController
 		let presenter = LoginPresenter(viewController: viewController)
 		let interactor = LoginInteractor(presenter: presenter)
-		let router = LoginRouter(dataStore: interactor, sceneNavigator: sceneNavigator)
 		viewController.interactor = interactor
-		viewController.router = router
 	}
 
 }
