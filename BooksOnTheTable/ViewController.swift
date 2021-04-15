@@ -7,6 +7,35 @@
 
 import UIKit
 
+class X: NSObject, UICollectionViewDataSource {
+
+	func setup() {
+		var allBooks: [Book] = []
+		var reading = allBooks.filter({ return $0.status == .reading })
+		var done = allBooks.filter({ return $0.status == .done })
+	}
+	
+	func numberOfSections(in collectionView: UICollectionView) -> Int {
+		return 3
+	}
+	
+	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+		if section == 0 {
+			return reading.count
+		} else if section == 1 {
+			return done.count
+		}
+	}
+	
+	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+		indexPath.section == 0 {
+			reading[indexPath.item]
+		}		
+	}
+	
+}
+
+
 class ViewController1: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 	
 	var pickerView: UIPickerView! = UIPickerView()
@@ -67,6 +96,13 @@ class ViewController: UIViewController {
 						password: "12345678"
 		)
 		
+		let vc = ViewController1()
+		vc.nameList = []
+		
+		var book = Book(id: "", title: "", authorName: "", genre: .horror, status: .reading)
+		book.authorName = ""
+		
+		
 		DispatchQueue.global().async {
 			self.authenticate(with: user) { (result: Result<Token, Error>) in
 				switch result {
@@ -74,6 +110,18 @@ class ViewController: UIViewController {
 					self.fetchBooks(with: token) { (result: Result<BookList, Error>) in
 						switch result {
 						case .success(let bookList):
+							if var firstBook = bookList.bookList.first {
+								debugPrint("first: \(firstBook)")
+								firstBook.title = "first book update"
+								self.booksAPI.update(book: firstBook, token: token.token) { (result: Result<Book, Error>) in
+									switch result {
+									case .success(let book):
+										debugPrint("book: \(book)")
+									case .failure(let error):
+										debugPrint("error: \(error)")
+									}
+								}
+							}
 							debugPrint("returned books: \(bookList.bookList)")
 							break
 						case .failure(let error):

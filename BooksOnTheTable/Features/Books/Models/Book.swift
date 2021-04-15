@@ -18,11 +18,11 @@ struct Book: Codable {
 		case done = "Done"
 	}
 	
-	let id: String?
-	let title: String
-	let authorName: String
-	let genre: Genre
-	let status: Status
+	var id: String?
+	var title: String
+	var authorName: String
+	var genre: Genre
+	var status: Status
 }
 
 extension Book {
